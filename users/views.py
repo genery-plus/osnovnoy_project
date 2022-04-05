@@ -1,15 +1,14 @@
-from django.views.generic.edit import FormView
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.http import HttpResponseRedirect
 from django.views.generic.base import View
-from django.contrib.auth import logout
+from django.views.generic.edit import FormView
+
 
 class RegisterFormView(FormView):
     form_class = UserCreationForm
 
-    success_url = "/login/"
+    success_url = "/users/login/"
 
     template_name = "register.html"
 
@@ -36,5 +35,4 @@ class LoginFormView(FormView):
 class LogoutView(View):
     def get(self, request):
         logout(request)
-
         return HttpResponseRedirect("/")

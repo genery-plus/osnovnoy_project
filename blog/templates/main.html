@@ -2,23 +2,198 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Страница заполнения</title>
+    <link rel="stylesheet" href="main.css"type="text/css/">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
-<body>
-   <form method="post">
-       {% csrf_token%}
-       {% for field in form %}
-       {{ field }}
-       {% endfor %}
-    <button>Сохранить</button>
-   <p></p>    
-   </form>
-   <table>
-    <tr></tr>
-    <tr>
-     <td><img src="pathfinder.jpg" alt=""></td>
-     <td></td>
+<body bgcolor="#F5DEB3" link="#8B4513" vlink="#A52A2A" > 
+    <!--<div><img src="https://static.wikia.nocookie.net/rpg/images/8/80/Pathfinder_RPG.png/revision/latest/scale-to-width-down/1000?cb=20100606105213&path-prefix=ru" alt="Лого pathfiner"  width="400" height="150" style="margin: 0px"> </div>
+        
+    <!--<h1>{{form.date}}<h2>-->
+   
+        <form  method="post">
+            
+            
+            
+        
+       
+
+        {% csrf_token%}
+
+      
+
+
+
+
+       <style> 
+        body{
+  width: 1500px;
+  
+}
+
+        .tableparams_one {
+            
+            position: relative;
+            margin: 0px auto;
+            right:600px;
+            
+        }  
+        .general-input {
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+            color: inherit;
+            outline: none;
+            padding:0;
+            margin: 0em 0em 0em 0em;
+            
+          }
+
+          h4 {
+            background: black;
+            color: white;
+            padding: 2px;
+            width: 60px;
+            height: 30px;
+            margin: 0em 0em 0em 0em;
+            align="center"
+               }
+        .input_abilyti {    
+                margin: 0.6em 1em 0.6em 0em;
+                height:30px;
+                }
+
+                .tableparams_two
+                {
+                position: relative;
+                margin: 0px auto;
+                bottom: px; 
+                right: 780px;
+                    
+                }    
+
+                .ory3   {background: black;
+                    color: white;
+                    padding: 2px;
+                    width: 80px;
+                    height: 40px;
+                    margin: 0em 0em 0em 0em;
+                    align="center"}
+            
+                    .myInput{
+                        width:110px;
+                        height:20px;
+                        }          
+                         
+                .tableparams_three
+                {
+                    position: relative;
+                    margin: 0px auto;
+                    bottom: 360px; 
+                    right: 410px;
+                }
+                .inich   {
+                    background: black;
+                    color: white;
+                    padding: 2px;
+                    width: 135px;
+                    height: 40px;
+                    margin: 0m 0em 0em 0em;
+                    
+                    align="center"}
+            
+                    .input_initiative {    
+                        margin: 1.8em 0.2em 0em 0em;
+                        height:30px;
+                        
+                        }  
+                        .blocktext {
+                            position: absolute;
+                            max-width: 60%;
+                            left:1000px;
+                            }  
+                        </style>
+    
+    <div class="blocktext">                    
+    <table class="tableparams_one"style=margin-left:px  style=padding:0px>
+    <tr> <td> <input style = "width:250px" type="text" class = "general-input"size="2" id={{form.character_name}}  <br> Имя персонажа </td> 
+    <td> <input style = "width:100px" type="text" class = "general-input"size="2" id={{form.worldview}} <br> Мировоззрение  </td>
+    <td> <input style = "width:100px" type="text" class = "general-input"size="2" id={{form.nameperson}} <br> Игрок </td>
+    <td> <input style = "width:100px" type="text" class = "general-input"size="2" id={{form.eye}} <br> Глаза </td>
     </tr>
-   </table>
+    <tr>
+    <td> <input style= "width:100px" type="text" class = "general-input"size="2" id={{form.lvlcharacter}} <br> Уровень персонажа </td>
+    <td> <input style = "width:100px" type="text" class = "general-input"size="2" id={{form.thedeity}} <br> Божество </td>
+    <td> <input style = "width:100px" type="text" class = "general-input"size="2" id={{form.homeland}} <br> Родина </td>
+    <td> <input style = "width:100px" type="text" class = "general-input"size="2" id={{form.hair}} <br> Волосы </td>
+    <td> <input style = "width:50px" type="text" class = "general-input"size="2" id={{form.weight}} <br> Вес </td>
+    
+    </tr>    
+    <tr>
+    <td> <input style = "width:100px" type="text" class = "general-input"size="2" id={{form.race}} <br> Народ </td> 
+    <td> <input style = "width:50px" type="text" class = "general-input"size="2" id={{form.size}} <br> Размер </td>
+    <td> <input style = "width:50px" type="text" class = "general-input"size="2" id={{form.floor}} <br> Пол </td>  
+    <td> <input style = "width:50px" type="text" class = "general-input"size="2" id={{form.age}} <br> Возраст </td>
+    <td> <input style = "width:50px" type="text" class = "general-input"size="2" id={{form.height}} <br> Рост </td>
+   
+    </tr>
+    </table>  
+    
+    
+    
+      
+    <table class="tableparams_two">
+        <th><h6>ХАРАК <br> ТЕРИСТИКА<h6></th>  <th><h6>ЗНАЧЕНИЕ<h6></th>  <th><h6>МОДИ <br> ФИКАТОР<h6></th>  <th><h6>ВРЕМ. <br> ИЗМЕНЕНИЕ<h6></th>  <th><h6>ВРЕМ. <br> МОДИФИК<h6></th></tr>
+
+        <tr><td><h4 align="center"> СИЛ</h4><br><h4 align="center">ЛВК</h4><br><h4 align="center">ВЫН</h4><br><h4 align="center"> ИНТ </h4><br><h4 align="center"> МДР </h4><br><h4 align="center"> ХАР</h4></td>
+
+        <td><input type="text" class = "input_abilyti"size="2" id={{form.srtength_ability_score}}<br><input type="text" class = "input_abilyti" size="2" id = {{form.dexterity_ability_score}} <br><input type="text" class = "input_abilyti" size="2" id = {{form.constitution_ability_score}} <br><input type="text" class = "input_abilyti" size="2" id={{form.intelligence_ability_score}}<br><input type="text"  class = "input_abilyti" size="2" id={{form.wisdom_ability_score}}<br> 
+        <input type="text" class = "input_abilyti"size="2" id={{form.charisma_ability_score}}</td></td>
+
+        <td><input type="text" class = "input_abilyti" size="2" id={{form.srtength_ability_modifier}} <br><input type="text" class = "input_abilyti" size="2" id={{form.dexterity_ability_modifier}} <br><input type="text" class = "input_abilyti" size="2" id={{form.constitution_ability_modifier}} <br><input type="text"  class = "input_abilyti" size="2" id={{form.intelligence_ability_modifier}} <br><input type="text" class = "input_abilyti" size="2" id={{form.wisdom_ability_modifier}} <br>
+        <input type="text" class = "input_abilyti"size="2" id={{form.charisma_ability_modifier}} </td></td>
+        
+        <td><input type="text" class = "input_abilyti" size="2" id={{form.srtength_temp_adjustment}} <br><input type="text" class = "input_abilyti" size="2" id={{form.dexterity_temp_adjustment}} <br><input type="text" class = "input_abilyti" size="2" id={{form.constitution_temp_adjustment}} <br><input type="text"  class = "input_abilyti" size="2" id={{form.intelligence_temp_adjustment}} <br><input type="text" class = "input_abilyti" size="2" id={{form.wisdom_temp_adjustment}} <br>
+        <input type="text" class = "input_abilyti"size="2" id={{form.charisma_temp_adjustment}} </td></td>
+        
+        <td><input type="text" class = "input_abilyti" size="2" id={{form.srtength_temp_modifier}} <br><input type="text" class = "input_abilyti" size="2" id={{form.dexterity_temp_modifier}} <br><input type="text" class = "input_abilyti" size="2" id={{form.constitution_temp_modifier}} <br><input type="text" class = "input_abilyti" size="2" id={{form.intelligence_temp_modifier}} <br><input type="text" class = "input_abilyti" size="2" id={{form.wisdom_temp_modifier}} <br>
+        <input type="text" class = "input_abilyti"size="2" id={{form.charisma_temp_modifier}} </td></td></tr>
+    </table>
+
+
+    
+    
+    <table  class="tableparams_three">
+        <tr><td colspan="1 "><h3 class="ory3"align="center">ПЗ <br><small>П.здоровья </small></h3> </td><td colspan="3 "> ВСЕГО <br> <input class="myInput" type="text"  id={{form.hit_points_total}} </td> <td colspan="1 "> СУ <br> <input class="myInput" type="text"  id={{form.hit_points_damage_reduction}} </td></tr>
+        <tr><td colspan="5 ">Раны/текущие ПЗ <br>  <input type="text" style = "width:375px; height:70px; " id={{form.hit_points_wounds_current_HP}}  </td></tr>
+        <tr><td colspan="5 ">Несмертельный урон <br>  <input type="text" style = "width:375px; height:30px; " id={{form.hit_points_nonlethal_damage}}  </td></tr>
+
+        <tr><td colspan="2" ><h3 align="center" class="inich">ИНИЦИАТИВА <br><small>модификатор</small></h3></td>  
+        <td>   <input type="text" class="input_initiative"  size="2" id={{form.initiative_modifier_total}} <br> ВСЕГО <br><br> </td> 
+        <td> = <input type="text" class="input_initiative"  size="2" id={{form.initiative_modifier_dex_modifier}} <br> МОДИФ. <br> ЛВК</td>
+        <td> + <input type="text" class="input_initiative"  size="2" id={{form.initiative_modifier_misc_modifier}} <br> ПРОЧИЕ <br> МОДИФ.</td> </tr>
+    </table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <button style="position:relative; top:700px;">Сохранить</button> 
+
 </body>
 </html>
